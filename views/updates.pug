@@ -1,0 +1,20 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        form(action="/update-cobj" method="POST" class="add-pet-form")
+            h2 Add a New Pet
+            label(for="name") Name:
+            input(type="text" name="name" id="name" required)
+            br
+            label(for="favorite_meal") Favorite Meal:
+            input(type="text" name="favorite_meal" id="favorite_meal" required)
+            br
+            label(for="favorite_toy") Favorite Toy:
+            input(type="text" name="favorite_toy" id="favorite_toy" required)
+            br
+            button(type="submit") Add Pet
+        a.back-button(href="/") Back to Homepage
